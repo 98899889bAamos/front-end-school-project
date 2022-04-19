@@ -1,0 +1,246 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.generate-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #001730;
+    display: flex;
+    flex-direction: column;
+}
+.generate-top {
+    width: 100%;
+    min-height: 10vh;
+    background-color: #001730;
+}
+.generate-hero {
+    width: 100%;
+    min-height: 90vh;
+    background-color: #001730;
+    display: flex;
+}
+.generate-hero-left {
+    width: 100%;
+    min-height: 90vh;
+    flex: 1;
+    border-right: 1px solid #272727;
+}
+.generate-hero-menu {
+    margin-left: 100px;
+    color: #fff;
+    list-style-type: none;
+    margin-top: 100px;
+}
+.generate-hero-menu-link {
+    color: #fff;
+    text-decoration: none;
+}
+.generate-hero-menu > li:not(:first-child) {
+    margin-top: 40px;
+}
+.generate-hero-menu > li > span {
+    margin-right: 10px;
+}
+.generate-hero-right {
+    width: 100%;
+    min-height: 90vh;
+    flex: 2;
+    padding-bottom: 20px;
+}
+.record-form {
+    margin-left: 50px;
+    width: 40%;
+    min-height: 50vh;
+    margin-top: 100px;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+}
+.record-form > h2{
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+.record-form > input {
+    height: 5vh;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.record-form > button{
+    margin-top: 10px;
+    height: 5vh;
+    width: 120px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.record-table {
+    width: 80%;
+    min-height: 60vh;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    background-color: #272727;
+    margin-top: 10px;
+    padding: 10px;
+}
+.record-table >h2{
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+.record-table > tr {
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+}
+.record-table > tr > th{
+    flex: 1;
+    color: #fff;
+}
+.record-table > tr > td{
+    flex: 1;
+    color: #fff;
+    text-align: center;
+}
+.record-table > tr > td:nth-child(6){
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    color: #a10453;
+}
+.edit-student {
+    text-decoration: none;
+    color: #a10453;
+}
+.validate-span {
+    color: #a10453;
+}
+.generation-class {
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 960px) {
+    .generate-container {
+        width: 100%;
+        min-height: 100vh;
+        background-color: #001730;
+        display: flex;
+        flex-direction: column;
+    }
+    .generate-top {
+        width: 100%;
+        min-height: 10vh;
+        background-color: #001730;
+    }
+    .generate-hero {
+        width: 100%;
+        min-height: 90vh;
+        background-color: #001730;
+        display: flex;
+        flex-direction: column;
+    }
+    .generate-hero-left {
+        width: 100%;
+        min-height: 30vh;
+        flex: 1;
+        border-right: 1px solid #272727;
+    }
+    .generate-hero-menu {
+        margin-left: 20px;
+        color: #fff;
+        list-style-type: none;
+        margin-top: 20px;
+    }
+    .generate-hero-menu-link {
+        color: #fff;
+        text-decoration: none;
+    }
+    .generate-hero-menu > li:not(:first-child) {
+        margin-top: 40px;
+    }
+    .generate-hero-menu > li > span {
+        margin-right: 10px;
+    }
+    .generate-hero-right {
+        width: 100%;
+        min-height: 90vh;
+        flex: 2;
+    }
+    .record-form {
+        margin-left: 10px;
+        width: 95%;
+        min-height: 50vh;
+        margin-top: 100px;
+        padding: 10px;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+    .record-form > h2{
+        color: #fff;
+        width: 100%;
+        text-align: center;
+    }
+    .record-form > input {
+        height: 5vh;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
+    .record-form > button{
+        margin-top: 10px;
+        height: 5vh;
+        width: 120px;
+    }
+    .record-table {
+        width: 95%;
+        min-height: 60vh;
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        background-color: #272727;
+        margin-top: 10px;
+        padding: 10px;
+    }
+    .record-table >h2{
+        width: 100%;
+        color: #fff;
+        text-align: center;
+    }
+    .record-table > tr {
+        width: 100%;
+        display: flex;
+        margin-top: 10px;
+    }
+    .record-table > tr > th{
+        flex: 1;
+        color: #fff;
+    }
+    .record-table > tr > td{
+        flex: 1;
+        color: #fff;
+        text-align: center;
+    }
+    .record-table > tr > td:nth-child(6){
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+        color: #a10453;
+    }
+    .edit-student {
+        text-decoration: none;
+        color: #a10453;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .record-table > tr > td:nth-child(6){
+        display: none;
+    }
+    .record-table > tr > th:nth-child(6){
+        display: none;
+    }
+}

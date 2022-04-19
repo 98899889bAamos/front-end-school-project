@@ -1,0 +1,13 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.footer__container {
+    background-color: #001730;
+    padding: 5rem 0;
+    text-align: center; 
+}
+.website__rights {
+    color: #fff;
+}

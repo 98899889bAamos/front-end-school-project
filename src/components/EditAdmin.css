@@ -1,0 +1,255 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.edit-admin-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #001730;
+    display: flex;
+    flex-direction: column;
+}
+.edit-admin-top {
+    width: 100%;
+    min-height: 10vh;
+    background-color: #001730;
+}
+.edit-admin-hero {
+    width: 100%;
+    min-height: 90vh;
+    background-color: #001730;
+    display: flex;
+}
+.edit-admin-hero-left {
+    width: 100%;
+    min-height: 90vh;
+    flex: 1;
+    border-right: 1px solid #272727;
+}
+.edit-admin-hero-menu {
+    margin-left: 100px;
+    color: #fff;
+    list-style-type: none;
+    margin-top: 100px;
+}
+.edit-admin-hero-menu-link {
+    color: #fff;
+    text-decoration: none;
+}
+.edit-admin-hero-menu > li:not(:first-child) {
+    margin-top: 40px;
+}
+.edit-admin-hero-menu > li >span {
+    margin-right: 10px;
+}
+.edit-admin-hero-right {
+    width: 100%;
+    min-height: 90vh;
+    flex: 2;
+}
+
+.edit-admin-hero-form {
+    margin-top: 100px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    min-height: 50vh;
+    padding: 10px;
+}
+.edit-admin-hero-form > h2{
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+.edit-admin-hero-form > input {
+    height: 5vh;
+    padding: 5px;
+}
+.edit-admin-hero-form > button {
+    margin-top: 10px;
+    height: 5vh;
+    width: 120px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    background-color: #FAB162;
+    border: none;
+}
+.edit-admin-hero-form > button:hover {
+    background-color: #487AFA;
+}
+.edit-admin-table {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-left: 50px;
+    padding: 10px;
+    min-height: 50vh;
+}
+.edit-admin-table > h2{
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+.edit-admin-table > tr {
+    display: flex;
+}
+.edit-admin-table > tr > th{
+    flex: 1;
+    color: aliceblue;
+    margin-top: 10px;
+}
+.edit-admin-table > tr > td{
+    flex: 1;
+    color: aliceblue;
+    margin-top: 10px;
+    text-align: center;
+}
+.searchBox {
+    position: relative;
+    width: 100%;
+    height: 5vh;
+}
+.searchBox > input {
+    height: 5vh;
+    width: 60%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 5px;
+}
+.searchBox > span {
+    position: absolute;
+    margin-left: 73%;
+    transform: translateY(-26px);
+}
+.td-buttton {
+    background: linear-gradient(to right, rgb(219, 129, 156), rgb(212, 127, 162));
+    border: none;
+    padding: 5px 10px;
+}
+.td-buttton-link {
+    text-decoration: none;
+}
+@media screen and (max-width: 960px) {
+    .edit-admin-container {
+        width: 100%;
+        min-height: 100vh;
+        background-color: #001730;
+        display: flex;
+        flex-direction: column;
+    }
+    .edit-admin-top {
+        width: 100%;
+        min-height: 10vh;
+        background-color: #001730;
+    }
+    .edit-admin-hero {
+        width: 100%;
+        min-height: 90vh;
+        background-color: #001730;
+        display: flex;
+        flex-direction: column;
+    }
+    .edit-admin-hero-left {
+        width: 100%;
+        min-height: 30vh;
+        border-right: 1px solid #272727;
+    }
+    .edit-admin-hero-menu {
+        margin-left: 20px;
+        color: #fff;
+        list-style-type: none;
+        margin-top: 20px;
+    }
+    .edit-admin-hero-menu-link {
+        color: #fff;
+        text-decoration: none;
+    }
+    .edit-admin-hero-menu > li:not(:first-child) {
+        margin-top: 40px;
+    }
+    .edit-admin-hero-right {
+        width: 100%;
+        min-height: 90vh;
+        flex: 2;
+    }
+    
+    .edit-admin-hero-form {
+        margin-top: 20px;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        min-height: 50vh;
+        padding: 10px;
+    }
+    .edit-admin-hero-form > h2{
+        color: #fff;
+        width: 100%;
+        text-align: center;
+    }
+    .edit-admin-hero-form > input {
+        height: 5vh;
+    }
+    .edit-admin-hero-form > button {
+        margin-top: 10px;
+        height: 5vh;
+        width: 120px;
+    }
+
+    .edit-admin-table {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin-left: 10px;
+        padding: 10px;
+        min-height: 50vh;
+    }
+    .edit-admin-table > tbody{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+    }
+    .edit-admin-table > h2{
+        color: #fff;
+        text-align: center;
+        width: 100%;
+    }
+    .edit-admin-table > tr {
+        display: flex;
+    }
+    .edit-admin-table > tr > th{
+        flex: 1;
+        color: aliceblue;
+        margin-top: 10px;
+    }
+    .edit-admin-table > tr > td{
+        flex: 1;
+        color: aliceblue;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .searchBox {
+        position: relative;
+        width: 100%;
+    }
+    .searchBox > input {
+        height: 5vh;
+        width: 60%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-top: 5px;
+    }
+    .searchBox > span {
+        position: absolute;
+        margin-left: 73%;
+        transform: translateY(-26px);
+    }
+    .td-buttton {
+        background: linear-gradient(to right, rgb(219, 129, 156), rgb(212, 127, 162));
+        border: none;
+        padding: 5px 10px;
+    }
+}

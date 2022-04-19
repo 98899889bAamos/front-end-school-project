@@ -1,0 +1,230 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.edit-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #001730;
+    display: flex;
+    flex-direction: column;
+}
+.edit-top {
+    width: 100%;
+    min-height: 10vh;
+    background-color: #001730;
+}
+.edit-hero {
+    width: 100%;
+    min-height: 90vh;
+    background-color: #001730;
+    display: flex;
+}
+.edit-hero-left {
+    width: 100%;
+    min-height: 90vh;
+    flex: 1;
+    border-right: 1px solid #272727;
+}
+.edit-hero-menu {
+    margin-left: 100px;
+    color: #fff;
+    list-style-type: none;
+    margin-top: 100px;
+}
+.edit-hero-menu-link {
+    color: #fff;
+    text-decoration: none;
+}
+.edit-hero-menu > li:not(:first-child) {
+    margin-top: 40px;
+}
+.edit-hero-menu > li > span {
+    margin-right: 10px;
+}
+.edit-hero-right {
+    width: 100%;
+    min-height: 90vh;
+    flex: 2;
+}
+.edit-form {
+    margin-left: 50px;
+    width: 40%;
+    min-height: 50vh;
+    margin-top: 100px;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+}
+.edit-form > h2{
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+.edit-form > input {
+    height: 5vh;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.edit-form > button{
+    margin-top: 10px;
+    height: 5vh;
+    width: 120px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    background-color: #FAB162 !important;
+    border: none !important;
+    cursor: pointer !important;
+    transition: 0.3s ease-in-out !important;
+}
+.edit-form > button:hover {
+    background-color: #487AFA !important;
+}
+.edit-table {
+    width: 80%;
+    min-height: 60vh;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    background-color: #272727;
+    margin-top: 10px;
+    padding: 10px;
+}
+.edit-table >h2{
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+.edit-table > tr {
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+}
+.edit-table > tr > th{
+    flex: 1;
+    color: #fff;
+}
+.edit-table > tr > td{
+    flex: 1;
+    color: #fff;
+    text-align: center;
+}
+.edit-student {
+    text-decoration: none;
+}
+.noRecord {
+    color: #fff;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (max-width: 960px) {
+    .edit-container {
+        width: 100%;
+        min-height: 100vh;
+        background-color: #001730;
+        display: flex;
+        flex-direction: column;
+    }
+    .edit-top {
+        width: 100%;
+        min-height: 10vh;
+        background-color: #001730;
+    }
+    .edit-hero {
+        width: 100%;
+        min-height: 90vh;
+        background-color: #001730;
+        display: flex;
+        flex-direction: column;
+    }
+    .edit-hero-left {
+        width: 100%;
+        min-height: 30vh;
+        flex: 1;
+        border-right: 1px solid #272727;
+    }
+    .edit-hero-menu {
+        margin-left: 20px;
+        color: #fff;
+        list-style-type: none;
+        margin-top: 20px;
+    }
+    .edit-hero-menu-link {
+        color: #fff;
+        text-decoration: none;
+    }
+    .edit-hero-menu > li:not(:first-child) {
+        margin-top: 40px;
+    }
+    .edit-hero-menu > li > span {
+        margin-right: 10px;
+    }
+    .edit-hero-right {
+        width: 100%;
+        min-height: 90vh;
+        flex: 2;
+    }
+    .edit-form {
+        margin-left: 10px;
+        width: 95%;
+        min-height: 50vh;
+        margin-top: 100px;
+        padding: 10px;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+    }
+    .edit-form > h2{
+        color: #fff;
+        width: 100%;
+        text-align: center;
+    }
+    .edit-form > input {
+        height: 5vh;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
+    .edit-form > button{
+        margin-top: 10px;
+        height: 5vh;
+        width: 120px;
+    }
+    .edit-table {
+        width: 80%;
+        min-height: 60vh;
+        margin-left: 50px;
+        display: flex;
+        flex-direction: column;
+        background-color: #272727;
+        margin-top: 10px;
+        padding: 10px;
+    }
+    .edit-table >h2{
+        width: 100%;
+        color: #fff;
+        text-align: center;
+    }
+    .edit-table > tr {
+        width: 100%;
+        display: flex;
+        margin-top: 10px;
+    }
+    .edit-table > tr > th{
+        flex: 1;
+        color: #fff;
+    }
+    .edit-table > tr > td{
+        flex: 1;
+        color: #fff;
+        text-align: center;
+    }
+    .edit-student {
+        text-decoration: none;
+    }
+}

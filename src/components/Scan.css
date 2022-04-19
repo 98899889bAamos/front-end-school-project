@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.scan-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #001730;
+    display: flex;
+    flex-direction: column;
+}
+.scan-top {
+    width: 100%;
+    min-height: 10vh;
+    background-color: #001730;
+}
+.scan-hero {
+    width: 100%;
+    min-height: 90vh;
+    background-color: #001730;
+    display: flex;
+}
+.scan-hero-left {
+    width: 100%;
+    min-height: 90vh;
+    flex: 1;
+    border-right: 1px solid #272727;
+}
+.scan-hero-menu {
+    margin-left: 100px;
+    color: #fff;
+    list-style-type: none;
+    margin-top: 100px;
+}
+.scan-hero-menu-link {
+    color: #fff;
+    text-decoration: none;
+}
+.scan-hero-menu > li:not(:first-child) {
+    margin-top: 40px;
+}
+.scan-hero-menu > li > span {
+    margin-right: 10px;
+}
+.scan-hero-right {
+    width: 100%;
+    min-height: 90vh;
+    flex: 2;
+}
+.scan-hero-right-header {
+    width: 100%;
+    text-align: center;
+    justify-self: center;
+    margin-top: 50px;
+    color: aliceblue;
+}
+
+.scan-hero-right-body {
+    width: 30%;
+    min-height: 30vh;
+    background-color: transparent;
+    margin-top: 30px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+.cam-scanner {
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 960px) {
+    .scan-container {
+        width: 100%;
+        min-height: 100vh;
+        background-color: #001730;
+        display: flex;
+        flex-direction: column;
+    }
+    .scan-top {
+        width: 100%;
+        min-height: 10vh;
+        background-color: #001730;
+    }
+    .scan-hero {
+        width: 100%;
+        min-height: 90vh;
+        background-color: #001730;
+        display: flex;
+        flex-direction: column;
+    }
+    .scan-hero-left {
+        width: 100%;
+        min-height: 30vh;
+        flex: 1;
+        border-right: 1px solid #272727;
+    }
+    .scan-hero-menu {
+        margin-left: 20px;
+        color: #fff;
+        list-style-type: none;
+        margin-top: 20px;
+    }
+    .scan-hero-menu-link {
+        color: #fff;
+        text-decoration: none;
+    }
+    .scan-hero-menu > li:not(:first-child) {
+        margin-top: 40px;
+    }
+    .scan-hero-menu > li > span {
+        margin-right: 10px;
+    }
+    .scan-hero-right {
+        width: 100%;
+        min-height: 90vh;
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+    }
+    .scan-hero-right-body {
+        width: 50%;
+        min-height: 30vh;
+        background-color: transparent;
+        margin-top: 30px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+}

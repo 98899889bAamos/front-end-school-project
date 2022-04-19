@@ -1,0 +1,273 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.account-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #001730;
+    display: flex;
+    flex-direction: column;
+}
+.account-top {
+    width: 100%;
+    min-height: 10vh;
+    background-color: #001730;
+}
+.account-hero {
+    width: 100%;
+    min-height: 90vh;
+    background-color: #001730;
+    display: flex;
+}
+.account-hero-left {
+    width: 100%;
+    min-height: 90vh;
+    flex: 1;
+    border-right: 1px solid #272727;
+}
+.account-hero-menu {
+    margin-left: 100px;
+    color: #fff;
+    list-style-type: none;
+    margin-top: 100px;
+}
+.account-hero-menu-link {
+    color: #fff;
+    text-decoration: none;
+}
+.account-hero-menu > li:not(:first-child) {
+    margin-top: 40px;
+}
+.account-hero-menu > li >span {
+    margin-right: 10px;
+}
+.account-hero-right {
+    width: 100%;
+    min-height: 90vh;
+    flex: 2;
+}
+
+.account-hero-form {
+    margin-top: 50px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    min-height: 50vh;
+    padding: 10px;
+}
+.account-hero-form > h2{
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+.account-hero-form > input {
+    height: 5vh;
+    padding: 5px;
+}
+.account-hero-form > button {
+    margin-top: 10px;
+    height: 5vh;
+    width: 120px;
+    background-color: #FAB162;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.account-hero-form > button:hover {
+    background-color: #487AFA;
+}
+.account-table {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: 50px;
+    padding: 10px;
+    min-height: 50vh;
+    background-color: #ACBFE6;
+    margin-bottom: 20px;
+}
+.account-table > h2{
+    color: #141414;
+    text-align: center;
+    width: 100%;
+}
+.account-table > tr {
+    display: flex;
+}
+.account-table > tr > th{
+    flex: 1;
+    color: #000;
+    margin-top: 10px;
+}
+
+.account-table > tr > td{
+    flex: 1;
+    color: #272727;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.account-table > tr > td:nth-child(4){
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    color: #a10453;
+}
+.searchBox {
+    position: relative;
+    width: 100%;
+    height: 5vh;
+}
+.searchBox > input {
+    height: 5vh;
+    width: 60%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 5px;
+}
+.searchBox > span {
+    position: absolute;
+    margin-left: 73%;
+    transform: translateY(-26px);
+}
+
+.td-buttton-link {
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    color: #a10453;
+}
+@media screen and (max-width: 960px) {
+    .account-container {
+        width: 100%;
+        min-height: 100vh;
+        background-color: #001730;
+        display: flex;
+        flex-direction: column;
+    }
+    .account-top {
+        width: 100%;
+        min-height: 10vh;
+        background-color: #001730;
+    }
+    .account-hero {
+        width: 100%;
+        min-height: 90vh;
+        background-color: #001730;
+        display: flex;
+        flex-direction: column;
+    }
+    .account-hero-left {
+        width: 100%;
+        min-height: 30vh;
+        border-right: 1px solid #272727;
+    }
+    .account-hero-menu {
+        margin-left: 20px;
+        color: #fff;
+        list-style-type: none;
+        margin-top: 20px;
+    }
+    .account-hero-menu-link {
+        color: #fff;
+        text-decoration: none;
+    }
+    .account-hero-menu > li:not(:first-child) {
+        margin-top: 40px;
+    }
+    .account-hero-right {
+        width: 100%;
+        min-height: 90vh;
+        flex: 2;
+    }
+    
+    .account-hero-form {
+        margin-top: 20px;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        min-height: 50vh;
+        padding: 10px;
+    }
+    .account-hero-form > h2{
+        color: #fff;
+        width: 100%;
+        text-align: center;
+    }
+    .account-hero-form > input {
+        height: 5vh;
+    }
+    .account-hero-form > button {
+        margin-top: 10px;
+        height: 5vh;
+        width: 120px;
+    }
+
+    .account-table {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        margin-left: 10px;
+        padding: 10px;
+        min-height: 50vh;
+        margin-bottom: 10px;
+    }
+    .account-table > tbody{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+    }
+    .account-table > h2{
+        color: #191919;
+        text-align: center;
+        width: 100%;
+    }
+    .account-table > tr {
+        display: flex;
+    }
+    .account-table > tr > th{
+        flex: 1;
+        color: #191919;
+        margin-top: 10px;
+    }
+    .account-table > tr > td{
+        flex: 1;
+        color: #191919;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .searchBox {
+        position: relative;
+        width: 100%;
+    }
+    .searchBox > input {
+        height: 5vh;
+        width: 60%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-top: 5px;
+    }
+    .searchBox > span {
+        position: absolute;
+        margin-left: 73%;
+        transform: translateY(-26px);
+    }
+    .td-buttton {
+        background: linear-gradient(to right, rgb(219, 129, 156), rgb(212, 127, 162));
+        border: none;
+        padding: 5px 10px;
+    }
+   
+}
+@media screen and (max-width: 414px) {
+    .account-table > tr > td:nth-child(4){
+       display: none;
+    }
+    .account-table > tr > th:nth-child(4){
+        display: none;
+     }
+    
+}
