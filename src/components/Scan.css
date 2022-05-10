@@ -37,6 +37,9 @@
     color: #fff;
     text-decoration: none;
 }
+.scan-hero-menu-link:hover {
+    color: #a10453 !important;
+}
 .scan-hero-menu > li:not(:first-child) {
     margin-top: 40px;
 }

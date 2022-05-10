@@ -166,6 +166,9 @@
         color: #fff;
         text-decoration: none;
     }
+    .edit-admin-hero-menu-link:hover {
+        color: #a10453 !important;
+    }
     .edit-admin-hero-menu > li:not(:first-child) {
         margin-top: 40px;
     }

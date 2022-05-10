@@ -9,6 +9,7 @@ export class Contact extends Component {
       email: "",
       message: "",
       error_list: [],
+      success: '',
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -25,10 +26,10 @@ export class Contact extends Component {
 
     if(res.data.status === 200) 
     {
-      console.log(res.data.message);
       this.setState({
         email: "",
         message: "",
+        success: "Thanks for the message. We will reply ASAP...",
       });
     }
     else
@@ -52,6 +53,7 @@ export class Contact extends Component {
           <textarea type="text" name="message" value={this.state.message} onChange={this.handleChange} />
           <span className='validate-span'>{this.state.error_list.message}</span>
           <button type='submit'>Send</button>
+          <span className='validate-span' style={{ marginTop: '20px' }}>{this.state.success}</span>
         </form>
 
         

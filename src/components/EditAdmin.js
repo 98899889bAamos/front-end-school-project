@@ -85,16 +85,16 @@ export class EditAdmin extends Component {
             <div className='edit-admin-hero-left'>
             <ul className='edit-admin-hero-menu'>
             <li>
-              <span><FontAwesomeIcon icon={faAddressBook} /></span><Link to='/account' smooth  className='edit-admin-hero-menu-link'>Account</Link>
+              <span><FontAwesomeIcon icon={faAddressBook} /></span><Link to='/account' smooth  className='account-hero-menu-link'>Account</Link>
             </li>
             <li>
-            <span><FontAwesomeIcon icon={faBookOpen} /></span><Link to='/records' smooth  className='edit-admin-hero-menu-link'>Records Manager</Link>
+            <span><FontAwesomeIcon icon={faBookOpen} /></span><Link to='/records' smooth  className='account-hero-menu-link'>Records Manager</Link>
             </li>
             <li>
             <span><FontAwesomeIcon icon={faFileImage} /></span><Link to='/generate' smooth  className='account-hero-menu-link'>Generate QR Code</Link>
             </li>
             <li>
-            <span><FontAwesomeIcon icon={faQrcode} /></span><Link to='/scan' smooth className='edit-admin-hero-menu-link'>Scan QR Code</Link>
+            <span><FontAwesomeIcon icon={faQrcode} /></span><Link to='/scan' smooth className='account-hero-menu-link'>Scan QR Code</Link>
             </li>
             </ul>
             </div>

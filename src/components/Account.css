@@ -37,6 +37,9 @@
     color: #fff;
     text-decoration: none;
 }
+.account-hero-menu-link:hover {
+    color: #a10453;
+}
 .account-hero-menu > li:not(:first-child) {
     margin-top: 40px;
 }

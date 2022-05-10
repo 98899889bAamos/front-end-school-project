@@ -15,6 +15,8 @@ import EditStudent from './components/EditStudent';
 import EditAdmin from './components/EditAdmin';
 import Generate from './components/Generate';
 import editQr from './components/EditQr';
+import Protected from './components/Protected';
+import ScannerTrial from './components/ScannerTrial';
 
 
 
@@ -28,13 +30,22 @@ function App() {
     <Route exact path='/about' component={About} />
     <Route exact path='/contacts' component={Contact} />
     <Route exact path='/signIn' component={SignIn} />
-    <Route exact path='/account' component={Account} />
-    <Route exact path='/records' component={Records} />
-    <Route exact path='/generate' component={Generate} />
-    <Route exact path='/scan' component={Scan} />
-    <Route exact path='/edit-student/:id' component={EditStudent} />
-    <Route exact path='/edit-qr/:id' component={editQr} />
-    <Route exact path='/edit-admin/:id' component={EditAdmin} />
+    <Route exact path='/account' component={Account}>
+      <Protected Cmp={Account} />
+    </Route>
+    <Route exact path='/records' component={Records}>
+        <Protected Cmp={Records} />
+    </Route>
+    <Route exact path='/generate' component={Generate}>
+      <Protected Cmp={Generate} />
+    </Route>
+    <Route exact path='/scan' component={Scan}>
+      <Protected Cmp={Scan} />
+    </Route>
+    <Route exact path='/edit-student/:id' component={EditStudent}></Route>
+    <Route exact path='/edit-qr/:id' component={editQr}></Route>
+    <Route exact path='/edit-admin/:id' component={EditAdmin}></Route>
+    <Route exact path='/scanner-trial' component={ScannerTrial}></Route>
     </Switch>
     <Footer />
     </div>

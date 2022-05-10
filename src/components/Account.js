@@ -17,10 +17,12 @@ export class Account extends Component {
                 admins: [],
                 loading: true,
                 error_list: [],
+                searchTry: '',
 
             }
         this.handleChange2 = this.handleChange2.bind(this)
         this.handleSubmit2 = this.handleSubmit2.bind(this)
+        this.searchTerm = this.searchTerm.bind(this)
     }
 
     handleChange2 = (event) => {
@@ -74,8 +76,16 @@ export class Account extends Component {
         console.log(res.data.message);
       }
     }
+
+    searchTerm = (e) => {
+      this.setState({
+        searchTry: e.target.value
+      });
+      console.log(this.state.searchTry);
+    }
   render() {
     const text = this.state.admins;
+   
     return (
       <div className='account-container'>
         <div className='account-top'></div>
@@ -114,7 +124,7 @@ export class Account extends Component {
                 <table className='account-table'>
                   <h2>List of Admins [{text.length}]</h2>
                   <div className='searchBox'>
-                    <input type="text" placeholder='search...' />
+                    <input type="text" placeholder='search...' onChange={this.searchTerm} value={this.state.searchTry}/>
                     <span><FontAwesomeIcon icon={faSearch} /></span>
                   </div>
                   <tr>
@@ -124,7 +134,20 @@ export class Account extends Component {
                     <th>2nd Action</th>
                   </tr> 
                     {
-                      text.map((item) => {
+                      text.filter((val) => {
+                        if(this.state.searchTry === "") {
+                          return val
+                        }
+                        else if (val.username.toLowerCase().includes(this.state.searchTry.toLowerCase())) {
+                          return val
+                        }
+                        else if (val.email.toLowerCase().includes(this.state.searchTry.toLowerCase())) {
+                          return val
+                        }
+                        else {
+                          return ""
+                        }
+                      }).map((item) => {
                         return(
                           <tr key={item.id}>
                             <td>{item.username}</td>

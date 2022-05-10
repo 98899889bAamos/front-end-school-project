@@ -17,10 +17,12 @@ export class Generate extends Component {
         loading: '',
         students: [],
         error_list: [],
+        searchFul: '',
       }
       this.handleChange3 = this.handleChange3.bind(this)
       this.handleSubmit3 = this.handleSubmit3.bind(this)
       this.deleteStudent = this.deleteStudent.bind(this)
+      this.searchTerm = this.searchTerm.bind(this)
     }
 
     handleChange3 = (e) => {
@@ -74,6 +76,11 @@ export class Generate extends Component {
         console.log(res.data.message);
       }
     }
+    searchTerm = (e) => {
+      this.setState({
+        searchFul: e.target.value
+      });
+    }
   render() {
     const leave = this.state.students;
     return (
@@ -89,7 +96,7 @@ export class Generate extends Component {
             <span><FontAwesomeIcon icon={faBookOpen} /></span><Link to='/records' smooth  className='generate-hero-menu-link'>Records Manager</Link>
             </li>
             <li>
-            <span><FontAwesomeIcon icon={faFileImage} /></span><Link to='/generate' smooth  className='account-hero-menu-link'>Generate QR Code</Link>
+            <span><FontAwesomeIcon icon={faFileImage} /></span><Link to='/generate' smooth  className='generate-hero-menu-link'>Generate QR Code</Link>
             </li>
             <li>
             <span><FontAwesomeIcon icon={faQrcode} /></span><Link to='/scan' smooth className='generate-hero-menu-link'>Scan QR Code</Link>
@@ -101,7 +108,7 @@ export class Generate extends Component {
               <h2>List of Students [{leave.length}]</h2>
 
               <div className='searchBox'>
-                  <input type="text" placeholder='search...' />
+                  <input type="text" placeholder='search...' onChange={this.searchTerm}  value={this.state.searchFul} />
                   <span><FontAwesomeIcon icon={faSearch} /></span>
               </div>
                 <tr>
@@ -112,7 +119,26 @@ export class Generate extends Component {
                   <th>Action</th>
                 </tr>
                 {
-                  leave.map((item) => {
+                  leave.filter((val) => {
+                    if(this.state.searchFul === "") {
+                      return val
+                    }
+                    else if (val.s_name.toLowerCase().includes(this.state.searchFul.toLowerCase())) {
+                      return val
+                    }
+                    else if (val.class.toString().includes(this.state.searchFul.toString())) {
+                      return val
+                    }
+                    else if (val.p_name.toLowerCase().includes(this.state.searchFul.toLowerCase())) {
+                      return val
+                    }
+                    else if (val.number.toString().includes(this.state.searchFul.toString())) {
+                      return val
+                    }
+                    else {
+                      return ""
+                    }
+                  }).map((item) => {
                     return(
                       <tr key={item.id}>
                         <td>{item.s_name}</td>

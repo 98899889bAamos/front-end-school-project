@@ -37,6 +37,15 @@
     color: #fff;
     text-decoration: none;
 }
+.records-hero-menu-link:hover {
+    color: #a10453 !important;
+}
+.mimi {
+    color: #487AFA;
+}
+.records-hero-menu-link.mimi {
+    color: #487AFA;
+}
 .records-hero-menu > li:not(:first-child) {
     margin-top: 40px;
 }

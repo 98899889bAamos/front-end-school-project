@@ -8,7 +8,8 @@ export class SignIn extends Component {
     super()
     this.state = {
       username: "",
-      password: ""
+      password: "",
+      mommaError: ''
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -22,11 +23,29 @@ export class SignIn extends Component {
   handleSubmit = async (e) => {
     e.preventDefault();
     let item = this.state;
-    console.log(item);
+    let result = await fetch(`http://localhost:8000/api/login`, {
+      method: 'POST',
+      headers: {
+        "Content-Type":"application/json",
+        "Accept":'application/json'
+      },
+      body:JSON.stringify(item)
+    });
     
-    this.props.history.push('/account');
+    result = await result.json();
+
+    localStorage.setItem("user-info", JSON.stringify(result))
+    if(result.status === 200) {
+    this.props.history.push('/account')
+    }
+    if (result.status === 404) {
+      this.setState({
+        mommaError: result.error
+      });
+    }
   }
   render() {
+    
     return (
       <div className='sign-school'>
         <div className='sign-school-top'></div>
@@ -38,6 +57,7 @@ export class SignIn extends Component {
          <label>Password</label>
          <input type="password" name='password' value={this.state.password} onChange={this.handleChange} />
          <button>Send</button>
+          <span style={{ color: '#a10453', marginTop: '10px' }}>{this.state.mommaError}</span>
         </form>
       </div>
     )

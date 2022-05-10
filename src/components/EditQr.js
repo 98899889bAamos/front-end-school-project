@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookOpen, faAddressBook, faQrcode, faFileImage } from '@fortawesome/fontawesome-free-solid'
 import { HashLink as Link } from 'react-router-hash-link'
 
-export class editQr extends Component {
+export class EditQr extends Component {
     constructor() {
       super()
       this.state = {
@@ -128,4 +128,4 @@ export class editQr extends Component {
   }
 }
 
-export default editQr
+export default EditQr

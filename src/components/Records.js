@@ -17,10 +17,14 @@ export class Records extends Component {
         loading: '',
         students: [],
         error_list: [],
+        blow: false,
+        searchFul: '',
       }
       this.handleChange3 = this.handleChange3.bind(this)
       this.handleSubmit3 = this.handleSubmit3.bind(this)
       this.deleteStudent = this.deleteStudent.bind(this)
+      this.handleActive = this.handleActive.bind(this)
+      this.searchTerm = this.searchTerm.bind(this)
     }
 
     handleChange3 = (e) => {
@@ -74,6 +78,19 @@ export class Records extends Component {
         console.log(res.data.message);
       }
     }
+   
+    handleActive = () => {  
+      this.setState({
+        blow: true
+      });
+    }
+
+   
+   searchTerm = (e) => {
+     this.setState({
+       searchFul: e.target.value
+     });
+   }
   render() {
     const leave = this.state.students;
     return (
@@ -83,16 +100,16 @@ export class Records extends Component {
             <div className='records-hero-left'>
             <ul className='records-hero-menu'>
             <li>
-            <span><FontAwesomeIcon icon={faAddressBook} /></span><Link to='/account' smooth  className='records-hero-menu-link'>Account</Link>
+            <span><FontAwesomeIcon icon={faAddressBook} /></span><Link to='/account' smooth className='records-hero-menu-link' onClick={this.handleActive}>Account</Link>
             </li>
             <li>
-            <span><FontAwesomeIcon icon={faBookOpen} /></span><Link to='/records' smooth  className='records-hero-menu-link'>Records Manager</Link>
+            <span><FontAwesomeIcon icon={faBookOpen} /></span><Link to='/records' smooth className='records-hero-menu-link' onClick={this.handleActive}>Records Manager</Link>
             </li>
             <li>
-            <span><FontAwesomeIcon icon={faFileImage} /></span><Link to='/generate' smooth  className='account-hero-menu-link'>Generate QR Code</Link>
+            <span><FontAwesomeIcon icon={faFileImage} /></span><Link to='/generate' smooth  className='records-hero-menu-link' onClick={this.handleActive}>Generate QR Code</Link>
             </li>
             <li>
-            <span><FontAwesomeIcon icon={faQrcode} /></span><Link to='/scan' smooth className='records-hero-menu-link'>Scan QR Code</Link>
+            <span><FontAwesomeIcon icon={faQrcode} /></span><Link to='/scan' smooth className='records-hero-menu-link' onClick={this.handleActive}>Scan QR Code</Link>
             </li>
             </ul>
             </div>
@@ -101,16 +118,16 @@ export class Records extends Component {
               <h2>Add a student</h2>
 
               <label>Student's name</label>
-              <input type="text" name="s_name"  value={this.state.s_name} onChange={this.handleChange3} />
+              <input type="text" name="s_name"  value={this.state.s_name} onChange={this.handleChange3}/>
               <span className='validate-span'>{this.state.error_list.s_name}</span>
               <label>Student's Class</label>
-              <input type="text" name="class"  value={this.state.class} onChange={this.handleChange3} />
+              <input type="text" name="class" value={this.state.class} onChange={this.handleChange3}/>
               <span className='validate-span'>{this.state.error_list.class}</span>
               <label>Parent's Name</label>
-              <input type="text" name="p_name"  value={this.state.p_name} onChange={this.handleChange3} />
+              <input type="text" name="p_name" value={this.state.p_name} onChange={this.handleChange3}/>
               <span className='validate-span'>{this.state.error_list.p_name}</span>
               <label>Parent's Number</label>
-              <input type="text" name="number"  value={this.state.number} onChange={this.handleChange3} />
+              <input type="text" name="number"  value={this.state.number} onChange={this.handleChange3}/>
               <span className='validate-span'>{this.state.error_list.number}</span>
               <button type="submit">Add</button>
             </form> 
@@ -119,7 +136,7 @@ export class Records extends Component {
               <h2>List of Students [{leave.length}]</h2>
 
               <div className='searchBox'>
-                  <input type="text" placeholder='search...' />
+                  <input type="text" placeholder='search...' onChange={this.searchTerm} value={this.state.searchFul} />
                   <span><FontAwesomeIcon icon={faSearch} /></span>
               </div>
                 <tr>
@@ -131,7 +148,28 @@ export class Records extends Component {
                   <th>2nd Action</th>
                 </tr>
                 {
-                  leave.map((item) => {
+                  leave.filter((val) => {
+                    if(this.state.searchFul === "") {
+                      return val
+                    }
+                    else if (val.s_name.toLowerCase().includes(this.state.searchFul.toLowerCase())) {
+                      return val
+                    }
+                    else if (val.class.toString().includes(this.state.searchFul.toString())) {
+                      return val
+                    }
+                    else if (val.p_name.toLowerCase().includes(this.state.searchFul.toLowerCase())) {
+                      return val
+                    }
+                    else if (val.number.toString().includes(this.state.searchFul.toString())) {
+                      return val
+                    }
+                    else {
+                      return ""
+                    }
+                  })
+                    
+                    .map((item) => {
                     return(
                       <tr key={item.id}>
                         <td>{item.s_name}</td>
