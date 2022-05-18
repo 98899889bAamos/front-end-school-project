@@ -32,7 +32,7 @@ export class EditAdmin extends Component {
         document.getElementById('updatebtn').disabled = true;
         document.getElementById('updatebtn').innerHTML = "updating";
         const admin_id = this.props.match.params.id;
-        const res = await axios.put(`http://127.0.0.1:8000/api/update-admin/${admin_id}`, this.state);
+        const res = await axios.put(`https://www.amosbilly.co.ke/school_project/public/api/update-admin/${admin_id}`, this.state);
     
         if(res.data.status === 200) 
         {
@@ -53,7 +53,7 @@ export class EditAdmin extends Component {
         const admin_id = this.props.match.params.id;
 
         console.log(admin_id);
-      const response = await axios.get(`http://127.0.0.1:8000/api/edit-admin/${admin_id}`);
+      const response = await axios.get(`https://www.amosbilly.co.ke/school_project/public/api/edit-admin/${admin_id}`);
 
 
 

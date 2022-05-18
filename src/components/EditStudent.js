@@ -37,7 +37,7 @@ export class EditStudent extends Component {
       const stud_id = this.props.match.params.id;
       document.getElementById('updatebtn').disabled = true;
       document.getElementById('updatebtn').innerHTML = "updating";
-      const res = await axios.put(`http://127.0.0.1:8000/api/update-student/${stud_id}`, this.state);
+      const res = await axios.put(`https://www.amosbilly.co.ke/school_project/public/api/update-student/${stud_id}`, this.state);
       if(res.data.status === 200)
       {
       
@@ -57,7 +57,7 @@ export class EditStudent extends Component {
     async componentDidMount() {
         const stud_id = this.props.match.params.id;
         console.log(stud_id);
-      const response = await axios.get(`http://127.0.0.1:8000/api/edit-students/${stud_id}`);
+      const response = await axios.get(`https://www.amosbilly.co.ke/school_project/public/api/edit-students/${stud_id}`);
 
       console.log(response.data.student);
       

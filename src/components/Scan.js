@@ -6,31 +6,31 @@ import { HashLink as Link } from 'react-router-hash-link'
 import { QrReader } from 'react-qr-reader'
 
 export class Scan extends Component {
-  constructor()
-  {
-    super()
+  constructor(props){
+    super(props)
     this.state = {
-      scanResultWebCam: ''
+      delay: 100,
+      result: 'No result',
+      face: 'rear'
     }
-    this.handleErrorWebCam = this.handleErrorWebCam.bind(this)
-    this.handleScanWebCam = this.handleScanWebCam.bind(this)
+
+    this.handleScan = this.handleScan.bind(this)
   }
-
-  handleErrorWebCam = (error) => {
-    console.log(error)
+  handleScan(data){
+    this.setState({
+      result: data,
+    })
   }
-
-  handleScanWebCam = (result) => {
-    if(result) {
-      this.setState({
-        scanResultWebCam: result
-      });
-
-      console.log(this.state.scanResultWebCam);
+  handleError(err){
+    console.error(err)
+  }
+  render(){
+    const previewStyle = {
+      height: 240,
+      width: 320,
     }
-  }
-  render() {
-    return (
+
+    return(
       <div className='scan-container'>
         <div className='scan-top'></div>
         <div className='scan-hero'>
@@ -53,13 +53,15 @@ export class Scan extends Component {
             <div className='scan-hero-right'>
               <h2 className='scan-hero-right-header'>Scan QR Code</h2>
               <div className='scan-hero-right-body'>
-                <QrReader 
-                delay={300}
-                style={{ width: '100%' }}
-                onError={this.handleErrorWebCam}
-                onScan={this.handleScanWebCam}
-                className="cam-scanner"
-                />
+              <QrReader
+              delay={this.state.delay}
+              style={previewStyle}
+              onError={this.handleError}
+              onScan={this.handleScan}
+              facingMode={this.state.face}
+              legacyMode
+              />
+            <p>{this.state.result}</p>
               </div>
             </div>
         </div>

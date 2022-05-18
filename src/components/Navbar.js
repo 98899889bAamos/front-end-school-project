@@ -78,7 +78,7 @@ function Navbar() {
       <Link to='/SignIn' smooth>Sign In</Link>
     </li>
     <li onClick={closeMobileMenu}>
-      <Link to='/account' smooth>{user.data.username}</Link>
+      <Link to='/account' smooth style={{ color: '#FAB162' }}>{user.data.username}</Link>
     </li>
     <li onClick={closeMobileMenu}>
       <Link to='/account' smooth onClick={logOut}>Log Out</Link>

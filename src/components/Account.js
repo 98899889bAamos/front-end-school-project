@@ -32,7 +32,7 @@ export class Account extends Component {
     }
     handleSubmit2 = async (e) => {
         e.preventDefault();
-        const res = await axios.post('http://127.0.0.1:8000/api/add-admin', this.state);
+        const res = await axios.post('https://www.amosbilly.co.ke/school_project/public/api/add-admin', this.state);
     
         if(res.data.status === 200) 
         {
@@ -52,7 +52,7 @@ export class Account extends Component {
     }
 
     async componentDidMount() {
-      const response = await axios.get('http://127.0.0.1:8000/api/admins');
+      const response = await axios.get('https://www.amosbilly.co.ke/school_project/public/api/admins');
 
       console.log(response.data.admins)
       if(response.data.status === 200)
@@ -68,7 +68,7 @@ export class Account extends Component {
 
       const clickedNight = e.currentTarget;
       clickedNight.innerText = "Deleting";
-      const res = await axios.delete(`http://127.0.0.1:8000/api/delete-admin/${id}`);
+      const res = await axios.delete(`https://www.amosbilly.co.ke/school_project/public/api/delete-admin/${id}`);
 
       if(res.data.status === 200)
       {

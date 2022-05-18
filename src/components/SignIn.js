@@ -23,7 +23,7 @@ export class SignIn extends Component {
   handleSubmit = async (e) => {
     e.preventDefault();
     let item = this.state;
-    let result = await fetch(`http://localhost:8000/api/login`, {
+    let result = await fetch(`https://www.amosbilly.co.ke/school_project/public/api/login`, {
       method: 'POST',
       headers: {
         "Content-Type":"application/json",

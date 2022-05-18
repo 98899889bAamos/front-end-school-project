@@ -34,7 +34,7 @@ export class EditQr extends Component {
     async componentDidMount() {
         const stud_id = this.props.match.params.id;
         console.log(stud_id);
-      const response = await axios.get(`http://127.0.0.1:8000/api/edit-students/${stud_id}`);
+      const response = await axios.get(`https://www.amosbilly.co.ke/school_project/public/api/edit-students/${stud_id}`);
 
       console.log(response.data.student);
       
@@ -62,7 +62,7 @@ export class EditQr extends Component {
         const stud_id = this.props.match.params.id;
         try {
             e.preventDefault();
-            const response = await QRCode.toDataURL(`http://127.0.0.1:8000/api/update-student/${stud_id}`, this.state);
+            const response = await QRCode.toDataURL(this.state.number);
             console.log(this.state);
             
             this.setState({
