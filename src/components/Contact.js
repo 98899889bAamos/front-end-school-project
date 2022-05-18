@@ -22,7 +22,7 @@ export class Contact extends Component {
   }
   handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await axios.post('http://127.0.0.1:8000/api/add-message', this.state);
+    const res = await axios.post('https://www.amosbilly.co.ke/school_project/public/api/add-message', this.state);
 
     if(res.data.status === 200) 
     {
